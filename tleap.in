@@ -1,0 +1,14 @@
+source leaprc.protein.ff14SB 
+source leaprc.lipid14
+source leaprc.gaff2
+source leaprc.water.opc
+loadamberparams frcmod.ionslm_1264_opc
+loadamberparams Zn2+.frcmod
+loadamberparams Cd2+.frcmod
+loadOff ZN.lib
+loadOff CD.lib
+mol = loadpdb step5_input.pdb 
+set mol box { 101.079998016357422, 100.50899887084961, 126.817001342773438 }
+saveamberparm mol step5_input.parm7 step5_input.rst7
+quit
+

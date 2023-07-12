@@ -1,0 +1,27 @@
+min for deltaG calculation
+ &cntrl
+  imin=1,
+  irest=0, ! default, no velocity from rst
+  ntmin=1, ! default, steepest descent then conjugate
+  maxcyc=20000,
+  ncyc=10000,
+  cut=10.0,
+  ntb=1,
+  ntpr=500, ! write to mdinfo file
+  ntwr=500, ! write to rst file
+  ntwx=10000, ! write to mdcrd file
+  ntave=500, ! calc ave every 500 steps
+  ioutfm=1,
+  iwrap=1,
+  ntr=1,
+  restraintmask=':1-336',
+  restraint_wt=200,
+  icfe=1,
+  clambda=0.02544,
+  timask1 = ":334",
+  timask2 = ":335",
+  lj1264 = 1,
+/
+&ewald
+nfft1=48, nfft2=48, nfft3=48,
+/

@@ -1,0 +1,10 @@
+parm step5_input.parm7
+loadRestrt step5_input.rst7
+setOverwrite True
+change AMBER_ATOM_TYPE @927,2979,3394 MUTN 
+change AMBER_ATOM_TYPE @995,996,3045,3046,3410,3411 MUTC
+addLJType @%MUTN
+addLJType @%MUTC
+add12_6_4 :334,335 c4file c4_pvdw.txt polfile lj_1264_pol.dat
+outparm step5_input.parm7 step5_input.rst7
+printLJMatrix @%MUTN,MUTC
